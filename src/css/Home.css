@@ -35,7 +35,7 @@
 }
 
 @media(max-width:840px){
-  .home .container-home .recent{
+  .page .container-home .recent{
     display: none;
   }
 }
