@@ -1,0 +1,134 @@
+.home{
+  min-height: 100vh;
+  display: flex;
+  .container-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .resume-about-me{
+      width: 100%;
+      display: flex;
+      margin-bottom: 25px;
+      .info-resume-about-me{
+        width: 50%;
+        .label-title{
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+          color: $primary;
+          position: relative;
+          &:after{
+            width: 50px;
+            height: 3px;
+            position: absolute;
+            top:8px;
+            left:80px;
+            background: $primary;
+            content:"";
+          }
+        }
+        .gretting{
+          text-transform: uppercase;
+          margin: 15px 0px;
+          font-weight: 600;
+          font-size: 32px;
+        }
+        .professions{
+          font-size: 20px;
+          font-weight: 500;
+          margin-bottom: 15px;
+          text-transform: uppercase;
+        }
+        .description-resume{
+          line-height: 1.5;
+          font-size: 15px;
+          margin-bottom: 15px;
+        }
+        .btn{
+          background: $primary;
+          border-radius: 6px;
+          padding: 7px 24px;
+          color: $first;
+          border: 2px solid transparent;
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: 14px;
+          transition: all .3s ease;
+          cursor: pointer;
+          &:hover{
+            background: transparent;
+            color: $primary;
+            border-color: $primary;
+          }
+        }
+      }
+      .img-banner{
+        width: 50%;
+        img{
+          width: 100%;
+        }
+      }
+    }
+    .recent{
+      width: 100%;
+      display: grid;
+      grid-gap: 15px;
+      grid-template-columns: repeat(12,1fr);
+      .subtitle{
+        grid-column: span 12;
+        text-align: left;
+      }
+      .project-resume{
+        grid-column: span 3;
+        .portada-project-resume{
+          max-width: 200px;
+          max-height: 200px;
+          border-radius: 6px;
+          overflow: hidden;
+          margin-bottom: 5px;
+          img{
+            width: 100%;
+          }
+        }
+        .name-project-resume{
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.7;
+          margin-bottom: 3px;
+        }
+        .label-project-resume{
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 1.8;
+          color: rgb(145, 145, 157);
+        }
+      }
+    }
+  }
+}
+@media(max-width:840px){
+  .home{
+    .container-home{
+      .recent{
+        display: none;
+      }
+    }
+  }
+}
+@media(max-width:700px){
+  .home{
+    .container-home{
+      .resume-about-me{
+        flex-wrap: wrap;
+        .img-banner{
+          width: 100%;
+          order: 1;
+        }
+        .info-resume-about-me{
+          width: 100%;
+          order: 2;
+        }
+      }
+    }
+  }
+}
