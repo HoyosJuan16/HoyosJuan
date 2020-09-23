@@ -1,0 +1,8 @@
+:root {
+  --first: #fff;
+  --second: rgb(18,18,22);
+  --third: rgb(25,25,34);
+  --primary: #bf4904;
+  --complement: rgb(50, 50, 61);
+  --font: 'Montserrat', sans-serif;
+}

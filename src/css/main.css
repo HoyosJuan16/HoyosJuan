@@ -1,127 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-/* Colors */
-/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none; 
+}
 
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color: #fff;
-  background: #121216; }
+  background: #121216; 
+}
 
 ul {
-  list-style: none; }
-
+  list-style: none; 
+}
+.box-6{
+  grid-column: span 6;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 15px;
+}
 .container {
   width: 90%;
-  margin: auto; }
-
-.home {
+  margin: auto; 
+}
+.page{
   min-height: 100vh;
-  display: flex; }
-  .home .container-home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-    .home .container-home .resume-about-me {
-      width: 100%;
-      display: flex;
-      margin-bottom: 25px; }
-      .home .container-home .resume-about-me .info-resume-about-me {
-        width: 50%; }
-        .home .container-home .resume-about-me .info-resume-about-me .label-title {
-          font-size: 14px;
-          font-weight: 600;
-          text-transform: uppercase;
-          color: #bf4904;
-          position: relative; }
-          .home .container-home .resume-about-me .info-resume-about-me .label-title:after {
-            width: 50px;
-            height: 3px;
-            position: absolute;
-            top: 8px;
-            left: 80px;
-            background: #bf4904;
-            content: ""; }
-        .home .container-home .resume-about-me .info-resume-about-me .gretting {
-          text-transform: uppercase;
-          margin: 15px 0px;
-          font-weight: 600;
-          font-size: 32px; }
-        .home .container-home .resume-about-me .info-resume-about-me .professions {
-          font-size: 20px;
-          font-weight: 500;
-          margin-bottom: 15px;
-          text-transform: uppercase; }
-        .home .container-home .resume-about-me .info-resume-about-me .description-resume {
-          line-height: 1.5;
-          font-size: 15px;
-          margin-bottom: 15px; }
-        .home .container-home .resume-about-me .info-resume-about-me .btn {
-          background: #bf4904;
-          border-radius: 6px;
-          padding: 7px 24px;
-          color: #fff;
-          border: 2px solid transparent;
-          text-transform: uppercase;
-          font-weight: 500;
-          font-size: 14px;
-          transition: all .3s ease;
-          cursor: pointer; }
-          .home .container-home .resume-about-me .info-resume-about-me .btn:hover {
-            background: transparent;
-            color: #bf4904;
-            border-color: #bf4904; }
-      .home .container-home .resume-about-me .img-banner {
-        width: 50%; }
-        .home .container-home .resume-about-me .img-banner img {
-          width: 100%; }
-    .home .container-home .recent {
-      width: 100%;
-      display: grid;
-      grid-gap: 15px;
-      grid-template-columns: repeat(12, 1fr); }
-      .home .container-home .recent .subtitle {
-        grid-column: span 12;
-        text-align: left; }
-      .home .container-home .recent .project-resume {
-        grid-column: span 3; }
-        .home .container-home .recent .project-resume .portada-project-resume {
-          max-width: 200px;
-          max-height: 200px;
-          border-radius: 6px;
-          overflow: hidden;
-          margin-bottom: 5px; }
-          .home .container-home .recent .project-resume .portada-project-resume img {
-            width: 100%; }
-        .home .container-home .recent .project-resume .name-project-resume {
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 1.7;
-          margin-bottom: 3px; }
-        .home .container-home .recent .project-resume .label-project-resume {
-          font-size: 12px;
-          font-weight: 400;
-          line-height: 1.8;
-          color: #91919d; }
-
-@media (max-width: 840px) {
-  .home .container-home .recent {
-    display: none; } }
-@media (max-width: 700px) {
-  .home .container-home .resume-about-me {
-    flex-wrap: wrap; }
-    .home .container-home .resume-about-me .img-banner {
-      width: 100%;
-      order: 1; }
-    .home .container-home .resume-about-me .info-resume-about-me {
-      width: 100%;
-      order: 2; } }
-
-/*# sourceMappingURL=main.css.map */
+  display: flex;
+}
+.subtitle {
+  grid-column: span 12;
+  text-align: left; 
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}

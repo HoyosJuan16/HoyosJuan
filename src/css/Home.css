@@ -1,0 +1,54 @@
+.container-home{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+}
+.recent {
+  grid-column: span 12;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(12, 1fr); 
+}
+.project-resume {
+  grid-column: span 3; 
+}
+.project-resume .portada-project-resume {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 5px; 
+}
+.project-resume .portada-project-resume img {
+  width: 100%; 
+}
+.project-resume .name-project-resume {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 3px; 
+}
+.project-resume .label-project-resume {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #91919d; 
+}
+
+@media(max-width:840px){
+  .home .container-home .recent{
+    display: none;
+  }
+}
+@media(max-width:700px){
+  .about-me{
+    flex-wrap: wrap;
+  }
+  .about-me .img-banner{
+    width: 100%;
+    order: 1;
+  }
+  .info-about-me{
+    width: 100%;
+    order: 2;
+  }
+}

@@ -1,0 +1,68 @@
+.about-me {
+  grid-column: span 12;
+  display: flex;
+  margin-bottom: 25px; 
+}
+.info-about-me{
+  width: 50%;
+}
+.label-title{
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary);
+  position: relative;
+}
+.label-title:after{
+  width: 50px;
+  height: 3px;
+  position: absolute;
+  top:8px;
+  left:80px;
+  background: var(--primary);
+  content:"";
+}
+.gretting{
+  text-transform: uppercase;
+  margin: 15px 0px;
+  font-weight: 600;
+  font-size: 32px;
+}
+.professions{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.description-about-me {
+  line-height: 1.5;
+  font-size: 15px;
+  margin-bottom: 15px; 
+}
+.btn{
+  background: var(--primary);
+  border-radius: 6px;
+  padding: 7px 24px;
+  color: var(--first);
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.btn:hover{
+  background: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.img-about-me {
+  width: 50%; 
+  display: flex;
+  margin: auto;
+
+}
+.img-about-me img {
+  margin: auto;
+}
