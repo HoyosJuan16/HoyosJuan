@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
 import { Label } from './Label'
 import { Gretting } from './Gretting'
 import { Professions } from './Professions'
@@ -17,7 +18,7 @@ export const InfoAboutMe = ({ btnVerMas, photo, perfil }) => {
           Estudiante autodidacta interesado en el mundo del desarrollo web. Amante de javascript y de los problemas que no son falcil de resolver.
         </p>
         {
-          btnVerMas && <a href='./' className='btn'>ver más</a>
+          btnVerMas && <Link to='./about-me' className='btn'>ver más</Link>
         }
       </div>
       <div className='img-about-me'>

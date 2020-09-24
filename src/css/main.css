@@ -53,3 +53,10 @@ ul {
     padding-bottom: 25px;
   }
 }
+@media(max-width:800px){
+  .page{
+    padding-top: 30px;
+    padding-bottom: 0px;
+    margin-bottom: 80px;
+  }
+}
