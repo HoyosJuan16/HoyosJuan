@@ -8,6 +8,7 @@ import { Professions } from './Professions'
 import '../css/InfoAboutMe.css'
 
 export const InfoAboutMe = ({ btnVerMas, photo, perfil }) => {
+  
   return (
     <div className='about-me'>
       <div className='info-about-me'>
