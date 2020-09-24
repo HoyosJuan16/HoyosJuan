@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react'
+import React, { Fragment , useState , useEffect  } from 'react'
+import axios from 'axios'
 
 import { InfoAboutMe } from '../components/InfoAboutMe'
 import { Menu } from '../components/Menu'
@@ -23,6 +24,20 @@ import iconGitHub from '../icons/github.svg'
 import iconBitbucket from '../icons/bitbucket.svg'
 
 export const AboutMe = () => {
+
+  const [information,setInformation] = useState({})
+  const [skills,setSkills] = useState([])
+  const [intereses,setIntereses] = useState([])
+  useEffect( () => {
+    axios.get('http://localhost:4000/about')
+      .then(
+        res => {
+          setInformation(res.data[0].intereses)
+          setSkills(res.data[0].skills)
+          setIntereses(res.data[0].intereses)
+        }
+      )}, [setInformation])
+
   return (
     <Fragment>
       <div className='page'>
@@ -33,79 +48,79 @@ export const AboutMe = () => {
             perfil={true}
           />
           <div className='box-6'>
-            <h3 className='subtitle'>Intereses</h3>
+            <h3 className='subtitle' onClick={()=>console.log(skills)}>Intereses</h3>
             <p className="description-box">
-              Soy un apasionado de la tecnología, enfocado en el desarrollo de aplicaciones especialmente con Javacript y su librería React . Siempre estoy en busca de retos profesionales, me gusta adquirir experiencia en proyectos a gran escala y posibilidades de mucho crecimiento.
+              {intereses.puno}
             </p>
             <p className="description-box">
-              Soy una persona autodidacta, día a día dedico tiempo para aprender en diferentes plataformas digitales como Platzi, Udemy, Youtube, documentación… en fin, cualquier plataforma que me pueda aportar conocimiento para crecer profesionalmente
+              {intereses.pdos}
             </p>
           </div>
           <div className='box-6'>
             <h3 className='subtitle'>Tecnologias</h3>
             <div className='icono-tecnologia'>
               <img src={iconHtml} alt='Logo html5' />
-              <span>HTML5</span>
+              <span>{skills[0]}</span>
             </div>
             <div className='icono-tecnologia'>
               <img src={iconCss} alt='Logo css' />
-              <span>CSS</span>
+              <span>{skills[1]}</span>
             </div>
             <div className='icono-tecnologia'>
               <img src={iconSass} alt='Logo Sass' />
-              <span>SASS</span>
+              <span>{skills[2]}</span>
             </div>
             <div className='icono-tecnologia'>
               <img src={iconBootstrap} alt='Logo Bootstrap' />
-              <span>Bootstrap</span>
+              <span>{skills[3]}</span>
             </div>
             <div className='icono-tecnologia'>
               <img src={iconJs} alt='Logo js' />
-              <span>JavaScrip</span>
+              <span>{skills[4]}</span>
             </div>
             <div className='icono-tecnologia'>
               <img src={iconJQuery} alt='Logo jQuery' />
-              <span>jQuery</span>
+              <span>{skills[5]}</span>
             </div>
             <div className='icono-tecnologia'>
               <img src={iconReactJS} alt='Logo React' />
-              <span>ReactJS</span>
+              <span>{skills[6]}</span>
             </div>
             <div className='icono-tecnologia'>
               <img src={iconNodeJS} alt='Logo NodeJS' />
-              <span>NodeJS</span>
+              <span>{skills[7]}</span>
             </div>
             <div className='icono-tecnologia'>
               <img src={iconExpress} alt='Logo Express' id='logoExpress' />
-              <span>Express</span>
+              <span>{skills[8]}</span>
             </div>
             <div className='icono-tecnologia'>
               <img src={iconMongoDB} alt='Logo MongoDB' />
-              <span>MongoDB</span>
+              <span>{skills[9]}</span>
             </div>
             <div className='icono-tecnologia'>
               <img src={iconPHP} alt='Logo PHP' />
-              <span>PHP</span>
+              <span>{skills[10]}</span>
             </div>
             <div className='icono-tecnologia'>
               <img src={iconSQL} alt='Logo SQL' />
-              <span>SQL</span>
+              <span>{skills[11]}</span>
             </div>
             <div className='icono-tecnologia'>
               <img src={iconMySQL} alt='Logo MySQL' />
-              <span>MySQL</span>
+              <span>{skills[12]}</span>
             </div>
             <div className='icono-tecnologia'>
               <img src={iconGit} alt='Logo Git' />
-              <span>Git</span>
+              <span>{skills[13]}</span>
             </div>
             <div className='icono-tecnologia'>
               <img src={iconGitHub} alt='Logo GitHub' />
-              <span>GitHub</span>
+              <span>{skills[13]}</span>
             </div>
             <div className='icono-tecnologia'>
               <img src={iconBitbucket} alt='Logo Bitbucket' />
-              <span>Bitbucket</span>
+              <span>{skills[14]}</span>
             </div>
           </div>
         </div>
