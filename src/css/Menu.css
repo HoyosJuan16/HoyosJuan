@@ -1,0 +1,112 @@
+.menu-bar{
+  /* grid-column: span 3; */
+  width: 25%;
+  position: fixed;
+  bottom:0px;
+  right:0;
+  background: rgb(25, 25, 34);
+  height: 100vh;
+  border-left: 1px solid rgb(50, 50, 61);
+  padding: 25px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.my-name{
+  padding: 0px 15px;
+}
+.my-name .span-dev{
+  color: var(--primary);
+}
+.options-menu .option{
+  padding: 7px 15px;
+  border-left: 4px solid transparent;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  transition: all .8s ease;
+}
+.options-menu .option:hover,
+.options-menu .option:focus{
+  border-color: var(--primary);
+  
+}
+.options-menu .option:hover a,
+.options-menu .option:focus a{
+  color: var(--primary);
+}
+.options-menu .option.selected{
+  border-color: var(--primary);
+}
+.options-menu .option.selected a{
+  color: var(--primary);
+}
+.options-menu .option a{
+  color: var(--first);
+  text-transform: uppercase;
+  transition: all .8s ease;
+}
+.social-networks{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.social-networks li{
+  font-size: 24px;
+  font-weight: 700;
+  transition: all .8s ease;
+}
+.social-networks li a{
+  color: var(--primary);
+  transition: all .8s ease;
+}
+.social-networks li:hover a,
+.social-networks li:hover,
+.social-networks li:focus a{
+  color: var(--first);
+  transform: scale(1.125);
+}
+@media(max-width:1024px){
+  .menu-bar{
+    width: 100%;
+    height: auto;
+    padding: 0px;
+  }
+  .my-name{
+    display: none;
+  }
+  .social-networks{
+    display: none;
+  }
+  .options-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .options-menu .option{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-left: 0px solid transparent;
+    border-top: 4px solid transparent;
+    padding-top: 20px 15px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    text-align: center;
+  }  
+  .options-menu .option:hover,
+  .options-menu .option:focus{
+    border-left: 0px solid transparent;
+    border-color: var(--primary);
+    
+  }
+  .options-menu .option.selected{
+    border-top: 4px solid var(--primary);
+  }
+  .options-menu .option span{
+    margin-top: 5px;
+    display: block;
+    font-size: 10px;
+    font-weight: 300;
+  }
+}

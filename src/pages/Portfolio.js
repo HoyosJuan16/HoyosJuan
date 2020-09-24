@@ -1,9 +1,6 @@
 import React from 'react'
 
-import { InfoAboutMe } from '../components/InfoAboutMe'
-
 import '../css/Portfolio.css'
-import Banner from '../images/banner.svg'
 
 export const Portfolio = () => {
   return (

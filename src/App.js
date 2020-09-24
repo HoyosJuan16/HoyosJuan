@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { Home } from './pages/Home'
 import { AboutMe } from './pages/AboutMe'
 import { Portfolio } from './pages/Portfolio'
+import { Menu } from './components/Menu'
 
 export const App = () => {
   return (
-    <div className="App"> 
+    <Fragment> 
       <Home />
+      <Menu />
       <AboutMe />
       <Portfolio />
-    </div>
+    </Fragment>
   );
 }
 

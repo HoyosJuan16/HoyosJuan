@@ -32,6 +32,7 @@ ul {
 .page{
   min-height: 100vh;
   display: flex;
+  grid-column: span 9;
 }
 .subtitle {
   grid-column: span 12;
@@ -39,4 +40,16 @@ ul {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 15px;
+}
+#root{
+  width: 100%;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+}
+@media(max-width:1024px){
+  .page{
+    grid-column: span 12;
+    padding-bottom: 25px;
+  }
 }
