@@ -24,7 +24,7 @@ import iconGit from '../icons/git.svg'
 import iconGitHub from '../icons/github.svg'
 import iconBitbucket from '../icons/bitbucket.svg'
 
-export const AboutMe = () => {
+export const AboutMe = ({ mode , actMode }) => {
 
   const [skills,setSkills] = useState([])
   const [loading,setLoading] = useState(true)
@@ -43,8 +43,9 @@ export const AboutMe = () => {
     <Fragment>
       <Loader 
         cargar={loading}
+        mode={mode}
       />
-      <div className='page'>
+      <div className={mode ? 'page page-dark' : 'page page-light'}>
         <div className='container container-about-me'>
           <InfoAboutMe
             btnVerMas={false}
@@ -131,6 +132,8 @@ export const AboutMe = () => {
       </div>
       <Menu 
         selected='2'
+        mode={mode}
+        actMode={actMode}
       />
     </Fragment>
   )

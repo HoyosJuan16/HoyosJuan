@@ -10,10 +10,10 @@ import iconJQuery from '../icons/jquery.svg'
 
 import '../css/Portfolio.css'
 
-export const Portfolio = () => {
+export const Portfolio = ({ mode , actMode }) => {
   return (
     <Fragment>
-      <div className='page'>
+      <div className={mode ? 'page page-dark' : 'page page-light'}>
         <div className='container container-portfolio'>
           <h2 className='subtitle'>Mis proyectos</h2>
           <Project
@@ -52,6 +52,8 @@ export const Portfolio = () => {
       </div>
       <Menu 
         selected='3'
+        mode={mode}
+        actMode={actMode}
       />
     </Fragment>
   )

@@ -1,4 +1,6 @@
 import React, { useState , useEffect  } from 'react'
+import { DarkMode } from './DarkMode'
+import { Language } from './Language'
 import axios from 'axios'
 
 import { Link } from 'react-router-dom'
@@ -9,26 +11,27 @@ import { faEnvelope, faHome, faBookOpen, faTh } from '@fortawesome/free-solid-sv
 
 import '../css/Menu.css'
 
-export const Menu = ({ selected }) => {
+export const Menu = ({ selected , mode , actMode }) => {
 
-  const [information,setInformation] = useState({})
   const [networks,setNetworks] = useState({})
   useEffect( () => {
     axios.get('https://backend-portfolio-hoyos-juan.herokuapp.com/about')
       .then(
         res => {
-          setInformation(res.data[0])
           setNetworks(res.data[0].networks)
         }
-      )}, [setInformation])
+      )}, [setNetworks])
 
   return (
-    <div className='menu-bar'>
-      <h2 className='my-name'  
-      onClick={()=>{
-        console.log(information)
-        console.log(information.about_me)
-      }}><span className='span-dev'>Dev</span>HoyosJuan</h2>
+    <div className={mode ? 'menu-bar dark-bar' : 'menu-bar light-bar'}>
+      <div className='primera-fila'>
+        <h2 className='my-name'><span className='span-dev'>Dev</span>HoyosJuan</h2>
+        {/* <Language /> */}
+        <DarkMode 
+          mode={mode}
+          actMode={actMode}
+        />
+      </div>
       <ul className='options-menu'>
         <li className={selected === '1' ? 'option selected' : 'option'}>
           <Link to='./'>

@@ -2,9 +2,15 @@ import React from 'react'
 
 import '../css/Loader.css'
 
-export const Loader = ({ cargar }) => {
+export const Loader = ({ cargar , mode }) => {
   return (
-    <div className={ cargar ? 'loader' : 'no-loader'}>
+    <div 
+      className={ cargar  
+                  ? (mode
+                    ? 'loader loader-dark'
+                    : 'loader loader-light')
+                  : 'no-loader'}
+    >
       <div className="spinner-box">
         <div className="circle-border">
           <div className="circle-core"></div>

@@ -12,8 +12,6 @@ a {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  color: #fff;
-  background: #121216; 
 }
 
 ul {
@@ -33,6 +31,10 @@ ul {
   min-height: 100vh;
   display: flex;
   grid-column: span 9;
+}
+.page-dark{
+  color: var(--first);
+  background: var(--second);
 }
 .subtitle {
   grid-column: span 12;
