@@ -25,18 +25,16 @@ import iconBitbucket from '../icons/bitbucket.svg'
 
 export const AboutMe = () => {
 
-  const [information,setInformation] = useState({})
   const [skills,setSkills] = useState([])
   const [intereses,setIntereses] = useState([])
   useEffect( () => {
-    axios.get('http://localhost:4000/about')
+    axios.get('https://backend-portfolio-hoyos-juan.herokuapp.com/about')
       .then(
         res => {
-          setInformation(res.data[0].intereses)
           setSkills(res.data[0].skills)
           setIntereses(res.data[0].intereses)
         }
-      )}, [setInformation])
+      )}, [setSkills])
 
   return (
     <Fragment>
