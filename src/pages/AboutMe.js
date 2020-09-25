@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import { InfoAboutMe } from '../components/InfoAboutMe'
 import { Menu } from '../components/Menu'
+import { Loader } from '../components/Loader'
 
 import '../css/AboutMe.css'
 import MyPhoto from '../images/perfil.jpg'
@@ -26,6 +27,7 @@ import iconBitbucket from '../icons/bitbucket.svg'
 export const AboutMe = () => {
 
   const [skills,setSkills] = useState([])
+  const [loading,setLoading] = useState(true)
   const [intereses,setIntereses] = useState([])
   useEffect( () => {
     axios.get('https://backend-portfolio-hoyos-juan.herokuapp.com/about')
@@ -33,11 +35,15 @@ export const AboutMe = () => {
         res => {
           setSkills(res.data[0].skills)
           setIntereses(res.data[0].intereses)
+          setLoading(false)
         }
       )}, [setSkills])
 
   return (
     <Fragment>
+      <Loader 
+        cargar={loading}
+      />
       <div className='page'>
         <div className='container container-about-me'>
           <InfoAboutMe

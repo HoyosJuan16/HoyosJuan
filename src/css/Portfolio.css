@@ -19,6 +19,7 @@
   position: relative;
   top:0px;
   left:0px;
+  background: var(--second);
 }
 .front .tecnologias-usadas{
   width: 100%;
