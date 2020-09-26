@@ -2,6 +2,16 @@
   grid-column: span 12;
   display: flex;
   margin-bottom: 25px; 
+  transition: all .8s ease;
+  animation: opacidad .8s ease;
+}
+@keyframes opacidad{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 .info-about-me{
   width: 50%;
@@ -61,8 +71,20 @@
   width: 50%; 
   display: flex;
   margin: auto;
-
+  transition: all .8s ease;
+  animation: derecha .8s ease;
+  position: relative;
+  top:0;
+  right:0;
 }
+ @keyframes derecha {
+   0%{
+    right:-100%;
+   }
+   100%{
+     right: 0%;
+   }
+ }
 .img-about-me img {
   margin: auto;
   border-radius: 6px;

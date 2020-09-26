@@ -1,15 +1,26 @@
-import React, { Fragment } from 'react'
+import React, { Fragment , useEffect , useState} from 'react'
 
 import { InfoAboutMe } from '../components/InfoAboutMe'
 import { Menu } from '../components/Menu'
+import { Loader } from '../components/Loader'
 
 import '../css/Home.css'
 import Banner from '../images/banner.svg'
 
 export const Home = ({ mode , actMode }) => {
 
+  const [loading,setLoading] = useState(true)
+
+  useEffect(()=>{
+    setLoading(false)
+  }, [setLoading])
+
   return (
     <Fragment>
+      <Loader 
+        cargar={loading}
+        mode={mode}
+      />
       <div className={mode ? 'page page-dark' : 'page page-light'}>
         <div className='container container-home'>
           <InfoAboutMe

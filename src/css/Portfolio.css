@@ -8,6 +8,17 @@
   border-radius: 6px;
   overflow: hidden;
   border: 1px solid var(--complement);
+  transition: all .8s ease;
+  transform: zoom 1s ease;
+}
+
+@keyframes zoom{
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
 .project img{
   width: 100%;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 
 import { Switch, Route } from 'react-router-dom'
 
@@ -11,11 +11,21 @@ export const App = () => {
 
   const [mode,setMode] = useState(false)
 
+  useEffect(()=>{
+    let aux = localStorage.getItem('modeDark') || 'false'
+    if(aux==='false'){
+      setMode(false)
+    }else{
+      setMode(true)
+    }
+  }, [setMode])
 
   const actualizarMode = () => {
     if(mode){
+      localStorage.setItem('modeDark', 'false')
       setMode(false)
     }else{
+      localStorage.setItem('modeDark', 'true')
       setMode(true)
     }
     console.log(mode)

@@ -22,15 +22,28 @@ ul {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 15px;
+  transition: all .8s ease;
+  animation: zoom .8s ease;
+}
+@keyframes zoom{
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
 .container {
   width: 90%;
   margin: auto; 
+  transition: all .8s ease;
 }
 .page{
   min-height: 100vh;
   display: flex;
   grid-column: span 9;
+  transition: all .8s ease;
+  overflow-x: hidden;
 }
 .page-dark{
   color: var(--first);
