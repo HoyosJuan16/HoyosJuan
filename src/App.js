@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { AboutMe } from './pages/AboutMe'
 import { Portfolio } from './pages/Portfolio'
+import { NotFound } from './pages/NotFound'
 
 export const App = () => {
 
@@ -35,6 +36,12 @@ export const App = () => {
       </Route>
       <Route exact path='/my-portfolio'>
         <Portfolio 
+          mode={mode}
+          actMode={actualizarMode}
+        />
+      </Route>
+      <Route >
+        <NotFound
           mode={mode}
           actMode={actualizarMode}
         />
