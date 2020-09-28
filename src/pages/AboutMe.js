@@ -5,6 +5,8 @@ import { InfoAboutMe } from '../components/InfoAboutMe'
 import { Menu } from '../components/Menu'
 import { Loader } from '../components/Loader'
 
+import cv from '../files/HoyosJuanManuel.pdf'
+
 import '../css/AboutMe.css'
 import MyPhoto from '../images/perfil.jpg'
 import iconHtml from '../icons/html.svg'
@@ -60,6 +62,7 @@ export const AboutMe = ({ mode , actMode }) => {
             <p className="description-box">
               {intereses.pdos}
             </p>
+            <a className='btn' href={cv} target='__blank' style={{'gridColumn':'span 12', 'textAlign':'center','marginBottom':'15px'}}>Descargar CV</a>
           </div>
           <div className='box-6'>
             <h3 className='subtitle'>Tecnologias</h3>

@@ -9,10 +9,10 @@ import { NotFound } from './pages/NotFound'
 
 export const App = () => {
 
-  const [mode,setMode] = useState(false)
+  const [mode,setMode] = useState(true)
 
   useEffect(()=>{
-    let aux = localStorage.getItem('modeDark') || 'false'
+    let aux = localStorage.getItem('modeDark') || 'true'
     if(aux==='false'){
       setMode(false)
     }else{
