@@ -166,6 +166,7 @@
   .menu-bar .primera-fila{
     position: absolute;
     top: 15px;
+    width: auto;
   }
   .menu-bar .primera-fila .btn-mode{
     transform: rotateZ(90deg);
