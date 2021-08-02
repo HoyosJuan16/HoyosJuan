@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "./static/css/main.22b95a26.chunk.css",
+    "main.js": "./static/js/main.26595bfb.chunk.js",
+    "main.js.map": "./static/js/main.26595bfb.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.e6c4d886.js",
+    "runtime-main.js.map": "./static/js/runtime-main.e6c4d886.js.map",
+    "static/js/2.bff3b892.chunk.js": "./static/js/2.bff3b892.chunk.js",
+    "static/js/2.bff3b892.chunk.js.map": "./static/js/2.bff3b892.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.a9dcf6e98a6a841fecf6232ceed0e62c.js": "./precache-manifest.a9dcf6e98a6a841fecf6232ceed0e62c.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.22b95a26.chunk.css.map": "./static/css/main.22b95a26.chunk.css.map",
+    "static/js/2.bff3b892.chunk.js.LICENSE.txt": "./static/js/2.bff3b892.chunk.js.LICENSE.txt",
+    "static/media/404.svg": "./static/media/404.c05b6e8a.svg",
+    "static/media/HoyosJuanManuel.pdf": "./static/media/HoyosJuanManuel.89d1952a.pdf",
+    "static/media/banner.svg": "./static/media/banner.21801692.svg",
+    "static/media/bitbucket.svg": "./static/media/bitbucket.733b9782.svg",
+    "static/media/bootstrap.svg": "./static/media/bootstrap.c4ce29f3.svg",
+    "static/media/css.svg": "./static/media/css.f5da6f25.svg",
+    "static/media/express.svg": "./static/media/express.f1a0b0e9.svg",
+    "static/media/git.svg": "./static/media/git.f3f4f15d.svg",
+    "static/media/github.svg": "./static/media/github.76d344f0.svg",
+    "static/media/html.svg": "./static/media/html.8ee96cee.svg",
+    "static/media/jquery.svg": "./static/media/jquery.8ec9bacf.svg",
+    "static/media/js.svg": "./static/media/js.6e350c5b.svg",
+    "static/media/mongodb.svg": "./static/media/mongodb.52783a2f.svg",
+    "static/media/mysql.svg": "./static/media/mysql.73636822.svg",
+    "static/media/nodejs.svg": "./static/media/nodejs.f13b681b.svg",
+    "static/media/perfil.jpg": "./static/media/perfil.a98164ee.jpg",
+    "static/media/php.svg": "./static/media/php.e09959d7.svg",
+    "static/media/react.svg": "./static/media/react.e9f3d01c.svg",
+    "static/media/sass.svg": "./static/media/sass.88c10477.svg",
+    "static/media/sql.svg": "./static/media/sql.560ce161.svg"
+  },
+  "entrypoints": [
+    "./static/js/runtime-main.e6c4d886.js",
+    "./static/js/2.bff3b892.chunk.js",
+    "./static/css/main.22b95a26.chunk.css",
+    "./static/js/main.26595bfb.chunk.js"
+  ]
+}

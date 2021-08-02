@@ -1,0 +1,5 @@
+Options All -Indexes
+DirectoryIndex ./index.html
+RewriteEngine on
+DirectoryIndex ./index.html
+ErrorDocument 404 ./index.html
